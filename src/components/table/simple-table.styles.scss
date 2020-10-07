@@ -1,0 +1,45 @@
+.simple-table {
+    p {
+        padding: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        flex-basis:20px;
+
+        div {
+            border: 1px solid black;
+            margin: 0px 0px -1px -1px;
+            padding: 2px;
+            
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .sp-input {
+                width: 60%;
+            }
+            .long-input {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+
+        .first-column {
+            white-space: nowrap;
+        }
+
+        .corp-wrapper {
+            display: flex;
+            justify-content: center;
+
+            input {
+                width: 40%;
+            }
+        }
+    }
+}

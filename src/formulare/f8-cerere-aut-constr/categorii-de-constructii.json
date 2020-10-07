@@ -1,0 +1,165 @@
+
+    [
+        {
+            "id":"constr-locuinte",
+            "content":"construcţii de locuinţe"
+        },
+        {
+            "id":"constr-publice",
+            "content":"construcţii pentru instituţii publice şi servicii:",
+            "children":
+                [
+                    {
+                        "id":"constr-publice-sanatate",
+                        "content":"pentru sănătate"
+                    },
+                    {
+                        "id":"constr-publice-sociale",
+                        "content":"pentru asistenţă socială"
+                    },
+                    {
+                        "id":"constr-publice-invatamant",
+                        "content":"pentru învăţământ"
+                    },
+                    {
+                        "id":"constr-publice-cultura",
+                        "content":"pentru cultură"
+                    },
+                    {
+                        "id":"constr-publice-turism",
+                        "content":"pentru turism"
+                    },
+                    {
+                        "id":"constr-publice-culte",
+                        "content":"pentru culte"
+                    },
+                    {
+                        "id":"constr-publice-admin-finante",
+                        "content":"pentru administraţie şi finanţe"
+                    },
+                    {
+                        "id":"constr-publice-comert",
+                        "content":"pentru comerţ"
+                    },
+                    {
+                        "id":"constr-publice-servicii",
+                        "content":"pentru servicii"
+                    },
+                    {
+                        "id":"constr-publice-sport",
+                        "content":"pentru sport"
+                    },
+                    {
+                        "id":"constr-publice-recreere",
+                        "content":"pentru recreere"
+                    }
+                ]
+        },
+        {
+            "id":"constr-agricole",
+            "content":"construcţii agricole şi zootehnice"
+        },
+        {
+            "id":"constr-industriale",
+            "content":"construcţii industriale"
+        },
+        {
+            "id":"constr-depozitare",
+            "content":"construcţii pentru depozitare"
+        },
+        {
+            "id":"constr-transporturi",
+            "content":"construcţii pentru transporturi"
+        },
+        {
+            "id":"constr-telecomunicatii",
+            "content":"construcţii pentru telecomunicaţii"
+        },
+        {
+            "id":"constr-energetice",
+            "content":"construcţii energetice"
+        },
+        {
+            "id":"constr-hidrotehnice",
+            "content":"construcţii hidrotehnice"
+        },
+        {
+            "id":"constr-imbunatatiri-funciare",
+            "content":"construcţii pentru îmbunătăţiri funciare"
+        },
+        {
+            "id":"constr-tehnico-edilitare",
+            "content":"construcţii tehnico-edilitare"
+        },
+        {
+            "id":"constr-pompieri",
+            "content":"construcţii pentru pompieri"
+        },
+        {
+            "id":"constr-speciale",
+            "content":"construcţii cu caracter special"
+        },
+        {
+            "id":"constr-functiuni-comasate",
+            "content":"construcţii cu funcţiuni comasate"
+        },
+        {
+            "id":"retele-edilitare",
+            "content":"reţele edilitare:",
+            "children":
+                [
+                    {
+                        "id":"retele-apa",
+                        "content":"apă"
+                    },
+                    {
+                        "id":"retele-canalizare",
+                        "content":"canalizare"
+                    },
+                    {
+                        "id":"retele-electrice",
+                        "content":"energie electrică"
+                    },
+                    {
+                        "id":"retele-termice",
+                        "content":"termice"
+                    },
+                    {
+                        "id":"retele-gaze",
+                        "content":"gaze"
+                    },
+                    {
+                        "id":"retele-telecomunicatii",
+                        "content":"telecomunicaţii"
+                    }
+                ]
+            
+        },
+        {
+            "id":"amenajari-exterioare",
+            "content":"amenajări exterioare:",
+            "children":
+                [
+                    {
+                        "id":"amenajari-exterioare-consolidare",
+                        "content":"amenajarea şi consolidarea terenului"
+                    },
+                    {
+                        "id":"amenajari-exterioare-strazi-alei",
+                        "content":"străzi, alei, platforme, parcaje, garaje"
+                    },
+                    {
+                        "id":"amenajari-exterioare-spatii-libere",
+                        "content":"spaţii libere şi mobilier exterior"
+                    },
+                    {
+                        "id":"amenajari-exterioare-spatii-verzi",
+                        "content":"spaţii verzi, împrejmuiri"
+                    }
+                ]
+        },
+        {
+            "id":"constr-proviztorii",
+            "content":"construcţii cu caracter provizoriu."
+        }
+    ]

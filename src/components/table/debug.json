@@ -1,0 +1,10 @@
+[
+    {
+        "content":"Înălţimea la cornişă sau streaşină",
+        "id":"h_cornisa" 
+    },
+    {
+        "content":"Înălţimea maximă a construcţiilor",
+        "id":"h_max" 
+    }
+]

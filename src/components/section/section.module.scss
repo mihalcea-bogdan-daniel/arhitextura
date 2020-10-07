@@ -1,0 +1,16 @@
+@import '../../theme/color-table.scss';
+
+.section {
+    @include rounded-corners;
+    padding: 10px;
+    border-left: 3px solid $proiectant-border;
+}
+
+
+
+@media print {
+    .section {
+        @include reset-borders;
+        padding: 0;
+    }
+}

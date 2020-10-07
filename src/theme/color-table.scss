@@ -1,0 +1,25 @@
+$light-grey: #cfccd6ff;
+$dark-grey:#2a2d34ff;
+$beneficiar-border: #d112c1;
+$imobil-border: #6279b8ff;
+$proiectant-border:#e6480fff;
+
+$steel-pink: #d112c1ff;
+$lavender-gray: #cfccd6ff;
+$raisin-black: #2a2d34ff;
+$flame: #e6480fff;
+
+@mixin rounded-corners {
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px -2px rgba($dark-grey, 0.75);
+    
+
+}
+
+@mixin reset-borders {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+}

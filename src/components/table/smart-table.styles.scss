@@ -1,0 +1,17 @@
+.smart-table{
+    div{
+        input{
+            max-width: 80px;
+
+        }
+        border: 1px solid black;
+        margin: 0px -2px -1px 1px;
+        padding: 2px;
+    }
+    text-align: center;
+    //Selecting headers and total data in the table
+    div:nth-child(6n+1), div:nth-child(-n+6), div:nth-child(6n+6){
+        font-weight: 700;
+    }
+    
+}

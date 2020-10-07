@@ -1,0 +1,30 @@
+[
+    {
+        "content":"Sistem constructiv",
+        "id":"sist-constr" 
+    },
+    {
+        "content":"Fundaţii",
+        "id":"fundatii" 
+    },
+    {
+        "content":"Acoperiş (şarpantă/terasă)",
+        "id":"acoperis" 
+    },
+    {
+        "content":"Sistem de încălzire",
+        "id":"incalzire" 
+    },
+    {
+        "content":"Învelitoare (material/culoare)",
+        "id":"invelitoare" 
+    },
+    {
+        "content":"Finisaj exterior (material/culoare)",
+        "id":"finisaje" 
+    },
+    {
+        "content":"Tâmplărie exterior (material/culoare)",
+        "id":"tamplarie" 
+    }
+]

@@ -1,0 +1,61 @@
+@import '../../theme/color-table.scss';
+@import '../../theme/grid-tables.scss';
+.anexe{
+    @include rounded-corners;
+    padding:10px;
+    border-left: 3px solid $beneficiar-border;
+    ol.nested-list{
+        counter-reset: list;
+        padding-left: 5px;
+        li{
+            list-style: none;
+            padding-left: 0;
+        }
+        li:before {
+            content:"d." counter(list) ") ";
+            counter-increment: list;
+        }
+    }
+    .tabel-2-coloane{
+        @include grid-2-columns;
+        column-gap: 30px;
+        div{
+            padding: 0;
+            border: none;
+            margin: 0;
+        }
+        
+    }
+    .declaratie-proprie-raspundere{
+        border: 3px solid black;
+        padding: 5px;
+        margin:10px;
+        text-align: center;
+    }
+    .data-semnatura{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        height: 100px;
+        padding-top: 100px;
+        >div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+
+@media print{
+    .anexe{
+        @include reset-borders;
+        padding:0;
+    }
+    
+}
+

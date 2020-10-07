@@ -1,0 +1,17 @@
+@import '../../theme/color-table.scss';
+@import '../../theme/grid-tables.scss';
+
+.tabel-verificatori{
+    @include grid-2-columns;
+    div{
+        border: 1px solid $dark-grey;
+        display: flex;
+        margin: -1px 0px 0px -1px;
+        flex-direction: column;
+        padding: 5px;
+        div{
+            border: none;
+        }
+    }
+}
+

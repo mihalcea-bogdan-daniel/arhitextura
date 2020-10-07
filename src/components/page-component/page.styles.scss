@@ -1,0 +1,112 @@
+@import '../../theme/color-table.scss';
+
+//Pagini - stiluri
+section.pagina {
+    display: block;
+    padding: 18px;
+    margin-bottom: 10px;
+    @include rounded-corners;
+
+    p,
+    p li {
+        margin: 0;
+        font-size: 10pt;
+        line-height: 1.2;
+        list-style: none;
+        text-align:justify;
+    }
+
+    .indent {
+        text-indent: 40px;
+    }
+
+    .nr-pagina {
+        width: 100%;
+        text-align: right;
+    }
+
+    h1 {
+        font-size: 12pt;
+        font-weight: 700;
+        text-align: center;
+        white-space: pre-wrap;
+        padding: 15px 0 15px 0;
+    }
+
+    section {
+        margin: 8px 0 8px 0;
+    }
+    div.nota-subsol{
+        width: 100%;
+        border-top: 1px solid $dark-grey;
+        // margin-bottom: 10mm;
+        // position: absolute;
+        // bottom: 0;
+        font-size: 8pt;
+    }
+}
+.grid-2-columns{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    div li{
+        margin-left: 15px;
+    }
+}
+
+//Tabele din toate paginile
+div.tabel-2c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+//Print view
+@media print {
+    section.pagina {
+        size: a4;
+        padding: 0;
+        border: none;
+        float: none !important;
+        padding-top: 20px;
+        page-break-after: always !important;
+        @include reset-borders;
+
+        //testing part
+        display: flex;
+        flex-direction: column;
+
+        p {
+            padding: 0;
+        }
+
+        section {
+            p {
+                padding: 0;
+            }
+
+            p.lista-identificare-teren {
+                padding: 2mm 0 2mm 0;
+            }
+
+            margin: 2mm 0 2mm 0;
+            padding: 0;
+        }
+        // div.nota-subsol{
+        //     width: 90%;
+        //     border-top: 1px solid $dark-grey;
+        //     margin-bottom: 20px;
+        //     position: relative;
+        //     bottom: 0;
+        //     font-size: 8pt;
+        // }
+        div.nota-subsol{
+            width: 100%;
+            border-top: 1px solid;
+            position: relative;
+            bottom: 0;
+            font-size: 8pt;
+            align-items: flex-end;
+        }
+        
+    }
+
+}
