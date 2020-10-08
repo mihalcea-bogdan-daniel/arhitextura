@@ -38,7 +38,7 @@ export default class List extends React.Component {
     return (
       <div
         className={`${classes.listItem} ${classes.numbered} 
-        ${props.padded ? classes.pad : ""}`}
+        ${props.pad ? classes.pad : ""}`}
       >
         {props.children}
       </div>
