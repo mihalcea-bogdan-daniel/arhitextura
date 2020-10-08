@@ -4,10 +4,15 @@ $beneficiar-border: #d112c1;
 $imobil-border: #6279b8ff;
 $proiectant-border:#e6480fff;
 
-$steel-pink: #d112c1ff;
-$lavender-gray: #cfccd6ff;
-$raisin-black: #2a2d34ff;
-$flame: #e6480fff;
+$arhitextura-dark:#24292c;
+$arhitextura-medium:#3f3f3d;
+$arhitextura-accent:#f39f22;
+$arhitextura-alt-medium:#4e5a66;
+$arhitextura-light:#eeefe9;
+
+
+
+
 
 @mixin rounded-corners {
     // border: 1px solid $light-grey;

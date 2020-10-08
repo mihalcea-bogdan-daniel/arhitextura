@@ -4,6 +4,12 @@
     @include rounded-corners;
     padding: 10px;
     border-left: 3px solid $proiectant-border;
+    transition: box-shadow 0.25s ease-in;
+}
+
+.section:hover{
+    box-shadow: 6px 6px 6px 2px rgba($arhitextura-dark, 0.25);
+    transition: box-shadow 0.25s ease-in;
 }
 
 
@@ -12,5 +18,8 @@
     .section {
         @include reset-borders;
         padding: 0;
+    }
+    .section:hover{
+        box-shadow: none;
     }
 }
