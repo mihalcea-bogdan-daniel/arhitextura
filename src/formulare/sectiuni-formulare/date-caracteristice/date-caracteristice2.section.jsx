@@ -263,7 +263,7 @@ const DateCaracteristice2 = () => {
           style={{width:"100%"}}
             />
         </List>
-        <DataSemnatura/>
+        <DataSemnatura signText={<>Semnătură <sup>4)</sup></>}/>
       </Section>
 
     </>

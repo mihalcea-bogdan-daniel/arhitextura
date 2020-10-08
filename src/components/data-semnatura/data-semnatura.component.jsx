@@ -17,7 +17,7 @@ export default function DataSemnatura(props) {
         </div>
       </div>
       <div>
-        <div>Semnătură</div>
+        <div>{props.signText||"Semnătură"}</div>
         <div>
           <Input
             className="centrat"

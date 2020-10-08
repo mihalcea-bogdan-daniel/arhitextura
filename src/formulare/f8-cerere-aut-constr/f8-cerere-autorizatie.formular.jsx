@@ -61,14 +61,13 @@ const Content = () => {
                 <h4 className="indent">Capitolul 2 - Categorii de construcții</h4>
                 <CategorieCosntructii tabel={listaCatConstructii} indentSubCat = {30}/>
                 <div className="nota-subsol" style={{marginTop:"120px"}}>
-                    <p>Se introduce "X" în casetă</p> 
-                    
+                    <div>Se introduce "X" în casetă</div> 
                 </div>
             </Page>
             <Page id = "pagina-4" >
                 <h4 className="indent">Capitolul 3 ⎯ Date caracteristice privind amplasamentele şi construcţiile </h4>
                 <DateCaracteristice/>
-                <div className="nota-subsol" style={{marginTop:"10px"}}>
+                <div className="nota-subsol" style={{marginTop:"15px"}}>
                     <div style={{marginLeft:"40px"}}><sup>2)</sup>Conform Legii nr.350/2001 cu modificările şi completările ulterioare şi HGR nr.525/1996, republicată</div>
                     <div style={{marginLeft:"40px"}}><sup>3)</sup>Documentul naţional de referinţă este STAS 4908-85</div>
                 </div>
@@ -77,6 +76,12 @@ const Content = () => {
                 <DateCaracteristice2>
                 
                 </DateCaracteristice2>
+                <div className="nota-subsol" style={{marginTop:"35px"}}>
+                    <div style={{marginLeft:"40px"}}><sup>4)</sup>Anexa se întocmeşte de către proiectantul documentaţiei (persoană fizică sau juridică), se precizează datele de
+identificare, după caz:</div>
+                    <div style={{marginLeft:"40px"}}>⎯ numele şi prenumele întocmitorului şi se aplică parafa ⎯ după caz ;</div>
+                    <div style={{marginLeft:"40px"}}>⎯ numele firmei, numele şi prenumele reprezentantului şi se aplică ştampila.</div>
+                </div>
             </Page>
         </div>
     )

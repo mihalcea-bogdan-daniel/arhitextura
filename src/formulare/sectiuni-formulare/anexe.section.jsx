@@ -4,7 +4,7 @@ import Input from '../../components/inputs/input.component'
 import TextLineTrough from '../../components/linetrough-text/text-linetrough.component'
 import COLORS from '../../theme/colors'
 import Section from "../../components/section/section.component";
-
+import DataSemnatura from '../../components/data-semnatura/data-semnatura.component'
 const Anexe = () =>{
     return(
         <Section color={COLORS.purple} className="anexe">
@@ -184,20 +184,7 @@ impactului asupra mediului.
 respect, în cunoştinţa prevederilor Codului penal privind infracţiunea de fals în declaraţii, autorizaţia de
 construire şi documentaţia aferentă vizată spre neschimbare.
                 </div>
-                <div className="data-semnatura">
-                    <div>
-                        <div>
-                            Data
-                            <Input className="centrat" id="data" name="data" style = {{width:"100%", margin:"0px"}} />
-                        </div>
-                    </div>
-                    <div>
-                        <div>Semnătură</div>
-                        <div><Input className="centrat" id="semnatura" name="semnatura" style = {{width:"100%", margin:"0px"}} /></div>
-                        <div>L.S.</div>
-                    </div>
-                    
-                </div>
+                <DataSemnatura/>
         </Section>
     )
 }

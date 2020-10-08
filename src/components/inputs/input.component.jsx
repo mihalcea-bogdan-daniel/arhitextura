@@ -8,7 +8,7 @@ export default class Input extends Component {
     }
 
     handleChange = (event) =>{
-        if(this.props.rememberdata==="true"){
+        if(this.props.rememberdata){
             localStorage.setItem(this.props.name, event.target.value)
         }
     
@@ -33,7 +33,6 @@ export default class Input extends Component {
             minLength={this.props.minLength}
             style={this.props.style}
             onChange = {this.handleChange} 
-            rememberdata = {this.props.rememberdata}
             {...this.props}
             >
             

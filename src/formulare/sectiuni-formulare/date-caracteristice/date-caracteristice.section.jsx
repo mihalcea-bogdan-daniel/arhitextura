@@ -103,7 +103,7 @@ const DateCaracteristice = () => {
             rezultate
             <Input name="nr-corp-cladiri-rezultate" style={{ width: "100%" }} />
           </List.BlankItem>
-          <List.NumberedItem padded>
+          <List.NumberedItem pad>
             Suprafeţe <sup>{`3)`}</sup>:
           </List.NumberedItem>
           <SmartTable />
@@ -111,17 +111,17 @@ const DateCaracteristice = () => {
             * Totalul rezultă prin însumarea suprafeţelor înscrise la rubricile
             „menţinute” şi „propuse”.
           </List.Note>
-          <List.NumberedItem padded>
+          <List.NumberedItem pad>
             Înălţimea construcţiilor propuse {`(`}în m{`)`}:
           </List.NumberedItem>
           <SimpleTable data={dateInaltimi} />
-          <List.NumberedItem padded>Numărul de niveluri</List.NumberedItem>
+          <List.NumberedItem pad>Numărul de niveluri</List.NumberedItem>
           <SimpleTable data={dataNiveluri} />
-          <List.NumberedItem padded>
+          <List.NumberedItem pad>
             Caracteristici constructive şi aspect exterior
           </List.NumberedItem>
           <SimpleTable data={dataSistemConstructiv} noSuffix />
-          <List.NumberedItem padded>
+          <List.NumberedItem pad>
             Capacităţi funcţionale ale construcţiilor proiectate:
           </List.NumberedItem>
           <List.DottedItem>
@@ -140,7 +140,12 @@ const DateCaracteristice = () => {
           <List.BlankItem>
           Număr de aprtamente propuse
           <Input name="nr-apartamente" style={{ width: "100%" }} />
-          din care cu: 1 cam.
+          din care cu: 
+          1 cam.
+          <Input
+              name="nr-apartamente-1-cam"
+              style={{ width: "100%", marginRight: "5px" }}
+            />
           2 cam.
           <Input
               name="nr-apartamente-2-cam"

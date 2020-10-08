@@ -16,9 +16,10 @@ export default function SimpleTable(props) {
           <div key={j}>
             <Input
               className= {`centrat ${!props.noSuffix ?"sp-input":"long-input"}`}
-              key={`${_data[j]["id"]}-corp-${j + 1}`}
-              name={`${_data[j]["id"]}-corp-${j + 1}`}
+              key={`${_data[j]["id"]}-corp-${i + 1}`}
+              name={`${_data[j]["id"]}-corp-${i + 1}`}
               suffix={`${props.noSuffix? "" : "m"}`}
+              rememberdata
             />
           </div>
         );
@@ -31,7 +32,7 @@ export default function SimpleTable(props) {
               key={`corp-c${i + 1}`}
               name={`corp-c${i + 1}`}
               className="centrat sp-input"
-              defaultValue={`C${i + 1}`}
+              defaultValue={`${i<=0 ? "C1" : ""} `}
             />
           </div>
           {_rowArray}
