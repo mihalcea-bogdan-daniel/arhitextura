@@ -16,10 +16,10 @@
 	// 	"description": "Log output to console"
 	// }
 	
-	"DivLong": {
+	"importc": {
 		"scope": "",
-		"prefix": "divli",
-		"body": ["<div className = 'list-item'>\n</div>"],
+		"prefix": "importc",
+		"body": ["import classes from '$0'"],
 		"description": "description"
 	}
 }
