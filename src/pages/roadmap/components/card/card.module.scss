@@ -1,4 +1,22 @@
+@import '../../../../theme/color-table.scss';
 
-.card{
-    box-shadow: 1px 1px 3px 0px rgba;
+
+.border{
+    background-color: blueviolet;
+    margin-left: -10px;
+    margin-right: 8px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2px auto;
+    box-shadow: 1px 1px 3px 0px rgba($arhitextura-dark, 0.25);
+    border-radius: 4px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    overflow: auto;
+}
+
+.card_content{
+    padding:  5px 0 5px 0;
 }

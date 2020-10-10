@@ -1,0 +1,15 @@
+@import '../../../../theme/color-table.scss';
+
+.section {}
+
+.card_container {
+    max-height: 400px;
+    -ms-overflow-style: none;
+
+    scrollbar-width: none;
+    overflow-y: scroll;
+
+    &.card_container::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,14 +1,21 @@
+@import '../../../../theme/color-table.scss';
+.global{
+    color:$arhitextura-dark;
+    user-select: none;
+}
 .heading1{
     font-size: 20pt;
     font-weight: 700;
     letter-spacing: 8px;
     // line-height: 1;
     text-transform: uppercase;
+    padding-top: 15px;
 }
 
 .heading2{
     font-size: 12pt;
     font-weight: 500;
+    padding-bottom: 5px;
     // letter-spacing: 8px;
     // line-height: 1;
     // text-transform: uppercase;
