@@ -27,3 +27,4 @@ yarn-error.log*
 
 #scss watcher .map files
 .css.map
+.htaccess

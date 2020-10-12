@@ -37,14 +37,14 @@ const SectiuneProiectant = () => {
           id="denumire-firma"
           name="denumire-firma"
           style={{ width: "270px" }}
-          rememberdata="true"
+          rememberdata
         />
         , cu sediul în județul
         <Input
           id="judet-firma"
           name="judet-firma"
           style={{ width: "200px" }}
-          rememberdata="true"
+          rememberdata
         />
         ,
         <TextLineTrough words={[" municipiul/", "orașul/", "comuna "]} />
@@ -52,7 +52,7 @@ const SectiuneProiectant = () => {
           id="localitate-firma"
           name="localitate-firma"
           style={{ width: "296px" }}
-          rememberdata="true"
+          rememberdata
         />
         ,
         <TextLineTrough words={[" sector/", "satul "]} />
@@ -60,7 +60,7 @@ const SectiuneProiectant = () => {
           id="sector-sat-firma"
           name="sector-sat-firma"
           size="255px"
-          rememberdata="true"
+          rememberdata
         />
         , cod poștal
         <Input
@@ -68,7 +68,7 @@ const SectiuneProiectant = () => {
           id="cp-firma"
           name="cp-firma"
           style={{ width: "50px" }}
-          rememberdata="true"
+          rememberdata
         />
         , str.
         <Input
@@ -76,7 +76,7 @@ const SectiuneProiectant = () => {
           id="str-firma"
           name="str-firma"
           style={{ width: "256px" }}
-          rememberdata="true"
+          rememberdata
         />
         , nr.
         <Input
@@ -84,7 +84,7 @@ const SectiuneProiectant = () => {
           id="nr-firma"
           name="nr-firma"
           style={{ width: "40px" }}
-          rememberdata="true"
+          rememberdata
         />
         , bl.
         <Input
@@ -92,7 +92,7 @@ const SectiuneProiectant = () => {
           id="bloc-firma"
           name="bloc-firma"
           style={{ width: "30px" }}
-          rememberdata="true"
+          rememberdata
         />
         , sc.
         <Input
@@ -100,7 +100,7 @@ const SectiuneProiectant = () => {
           id="scara-firma"
           name="scara-firma"
           style={{ width: "30px" }}
-          rememberdata="true"
+          rememberdata
         />
         , et.
         <Input
@@ -108,7 +108,7 @@ const SectiuneProiectant = () => {
           id="etaj-firma"
           name="etaj-firma"
           style={{ width: "30px" }}
-          rememberdata="true"
+          rememberdata
         />
         , ap.
         <Input
@@ -116,7 +116,7 @@ const SectiuneProiectant = () => {
           id="ap-firma"
           name="ap-firma"
           style={{ width: "30px" }}
-          rememberdata="true"
+          rememberdata
         />
         , respectiv de:
         <Input
@@ -124,7 +124,7 @@ const SectiuneProiectant = () => {
           id="nume-proiectant"
           name="nume-proiectant"
           style={{ width: "438px" }}
-          rememberdata="true"
+          rememberdata
         />
         , arhitect cu drept de semnătură, înscris în Tabloul Național al
         Arhitecților cu nr.
@@ -133,7 +133,7 @@ const SectiuneProiectant = () => {
           id="nr-tna"
           name="nr-tna"
           style={{ width: "300px" }}
-          rememberdata="true"
+          rememberdata
         />
         , în conformitate cu prevederile Legii nr. 184/2001 privind organizarea
         şi exercitarea profesiei de arhitect, republicată, aflat în evidenţa
@@ -143,7 +143,7 @@ const SectiuneProiectant = () => {
           id="filiala-oar-proiectant"
           name="filiala-oar-proiectant"
           style={{ width: "300px" }}
-          rememberdata="true"
+          rememberdata
         />
         a Ordinului Arhitecților din România.
       </p>
