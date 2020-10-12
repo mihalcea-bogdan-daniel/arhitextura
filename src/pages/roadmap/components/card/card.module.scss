@@ -12,11 +12,17 @@
     grid-template-columns: 2px auto;
     box-shadow: 1px 1px 3px 0px rgba($arhitextura-dark, 0.25);
     border-radius: 4px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 10px 10px 0px;
     padding: 0px 10px 0px 10px;
     overflow: auto;
 }
 
 .card_content{
     padding:  5px 0 5px 0;
+}
+.label_container{
+    display: flex;
+    gap:5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }

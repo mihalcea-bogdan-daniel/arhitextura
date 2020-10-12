@@ -29,6 +29,20 @@ export default class Roadmap extends Component {
             title="Short title for the implementations"
             content={lorem}/>
         </Section>
+        <Section title="Implementat">
+            <Card 
+            title="Short title for the implementations"
+            content={lorem}/>
+            <Card 
+            title="Short title for the implementations"
+            content={lorem}/>
+            <Card 
+            title="Short title for the implementations"
+            content={lorem}/>
+            <Card 
+            title="Short title for the implementations"
+            content={lorem}/>
+        </Section>
         
       </div>
     );

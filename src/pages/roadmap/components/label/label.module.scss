@@ -1,0 +1,9 @@
+@import '../../../../theme/color-table.scss';
+
+
+.label{
+    user-select: none;
+    color: $arhitextura-light;
+    border-radius: 40px;
+    padding: 2px 4px 2px 4px;
+}
