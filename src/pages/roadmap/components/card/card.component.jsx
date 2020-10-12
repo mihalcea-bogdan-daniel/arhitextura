@@ -3,13 +3,14 @@ import classes from "./card.module.scss";
 import Typography from "../typography/typography.component";
 import Label from '../label/label.component'
 
+const ApiData = React.createContext();
+
 class Card extends Component {
   constructor(props) {
     super();
   }
   render() {
     return (
-      
       <div className={classes.card}>
         <div className={classes.border}></div>
         <div className={classes.card_content}>
@@ -19,6 +20,7 @@ class Card extends Component {
             </div>
           <Typography.H2 text={this.props.title} />
           <Typography.P text={this.props.content}></Typography.P>
+          
         </div>
       </div>
     );

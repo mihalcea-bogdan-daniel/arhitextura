@@ -6,8 +6,11 @@ import Section from "./components/section/section.component";
 import Card from "./components/card/card.component";
 import Typography from "./components/typography/typography.component";
 
+const ApiData = React.createContext();
+
 export default class Roadmap extends Component {
   // static Title = (props)=>{return(<div className={classes.title}><span>{props.title}</span></div>)}
+  
   render() {
     const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio assumenda eius aut impedit. Quis, ratione incidunt hic facere quo nihil eligendi necessitatibus voluptas minus officia repellat adipisci! Quo, beatae!"
     return (
