@@ -3,7 +3,7 @@ import classes from "./card.module.scss";
 import Typography from "../typography/typography.component";
 import Label from '../label/label.component'
 
-const ApiData = React.createContext();
+
 
 class Card extends Component {
   constructor(props) {
