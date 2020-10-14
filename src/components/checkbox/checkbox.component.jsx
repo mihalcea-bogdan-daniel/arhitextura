@@ -25,7 +25,6 @@ export default class Checkbox extends Component {
     }
     handleChange = () => {
         this.setState({checked: this.inputRef.current.checked})
-        console.log(`${this.state} with name: ${this.inputRef.current.name}`);
     }
     handleFocus = () => {
         this.setState({focused: true})

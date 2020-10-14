@@ -26,7 +26,7 @@ export default function Label(props) {
         }`,
       }}
     >
-      <Typography.P2 text={"Label"} />
+      <Typography.P2 text={props.text} />
     </div>
   );
 }
