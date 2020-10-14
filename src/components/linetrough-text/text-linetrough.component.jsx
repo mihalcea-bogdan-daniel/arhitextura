@@ -9,13 +9,16 @@ const CheckItem = (props) => {
         className={`toggle-text${checked ? " linetrough" : ""}` } >{props.word}</span>
     )
 }
-
+/**
+ * It displays toggleable words, if clicked on word it will draw a linetrough on it
+ * @param {Array} props.words - an array of words
+ */
 const TextLineTrough = (props)=>{
     
     return(
-        props.words.map((e)=>{
+        props.words.map((word)=>{
             return(
-                <CheckItem key={e + "k"} word ={e} />
+                <CheckItem key={word + "k"} word = {word} />
             )
         })
 

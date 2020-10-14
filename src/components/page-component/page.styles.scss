@@ -45,19 +45,8 @@ section.pagina {
         font-size: 8pt;
     }
 }
-.grid-2-columns{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    div li{
-        margin-left: 15px;
-    }
-}
 
-//Tabele din toate paginile
-div.tabel-2c {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 //Print view
 @media print {

@@ -13,14 +13,17 @@ export default class List extends React.Component {
       {this.props.children}
     </div>
   );
-
+/**
+ * I adds an item in the list without any bullets or numberings
+ * @param {*} props.children - Return everything inside of the Component 
+ */
   static BlankItem = (props) => (
     <div className={`${classes.listItem}`} style={{ ...props.style }}>
       {props.children}
     </div>
   );
 
-  /**
+/**
  * Dotted item e.g. ● Something, like a list
  */
   static DottedItem = (props) => (

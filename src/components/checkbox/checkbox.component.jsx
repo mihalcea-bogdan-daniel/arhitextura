@@ -13,7 +13,12 @@ const PseudoCheckBox = (props) => {
         </div>
     )
 }
-
+/**
+ * Check box form component, wrapped inside <label></label> tag
+ * @param {String} name - Name of the component
+ * @param {String} id - ID of the component
+ * @return {React.children} this.props.children
+ */
 export default class Checkbox extends Component {
     constructor(){
         super()

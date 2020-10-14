@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import "./input.styles.scss";
 
+/**
+ * @param {String} props.name - Name of component
+ * @param {id} props.id - Id 
+ * @param {String} props.defaultValue - Default value of the input
+ * @param {String} props.maxLength - Maximum number of characters
+ * @param {String} props.minLength - Minimum number of characters
+ * @param {String} props.suffix - If set it will display a string at the end of the default value
+ * @param {String} className  - if set to center it will center the text className = {"center"}
+ */
+
 export default class Input extends Component {
   constructor() {
     super();
@@ -38,3 +48,4 @@ export default class Input extends Component {
     );
   }
 }
+

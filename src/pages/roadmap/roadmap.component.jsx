@@ -7,8 +7,6 @@ import {TRELLO_CONSTANTS} from './constants.js'
 
 //components
 import Section from "./components/section/section.component";
-import Card from "./components/card/card.component";
-import Typography from "./components/typography/typography.component";
 
 export default class Roadmap extends Component {
   constructor() {
@@ -39,7 +37,7 @@ export default class Roadmap extends Component {
 
   render() {
     // console.log(this.sectionComponentList());
-    const sections = this.sectionComponentList()
+    const sections = this.sectionComponentList();
     return (
       <div className={classes.roadmap_component}>
         {sections}
