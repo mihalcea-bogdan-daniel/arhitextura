@@ -128,14 +128,14 @@ const DateCaracteristice = () => {
             Construcţii de locuinţe<sup>{`1)`}</sup>
           </List.DottedItem>
           <Grid columns={4} rows={2} autoFlow={"row"}>
-            <CheckBox>principale(permanente)</CheckBox>
-            <CheckBox>sezoniere (de vacanţă)</CheckBox>
-            <CheckBox>pentru închiriere</CheckBox>
-            <CheckBox>sociale</CheckBox>
-            <CheckBox>de serviciu</CheckBox>
-            <CheckBox>de necesitate</CheckBox>
-            <CheckBox>de intervenţie</CheckBox>
-            <CheckBox>de protocol</CheckBox>
+            <CheckBox name="locuinte-principale">principale(permanente)</CheckBox>
+            <CheckBox name="locuinte-sezoniere">sezoniere (de vacanţă)</CheckBox>
+            <CheckBox name="locuinte-inchiriere">pentru închiriere</CheckBox>
+            <CheckBox name="locuinte-sociale">sociale</CheckBox>
+            <CheckBox name="locuinte-serviciu">de serviciu</CheckBox>
+            <CheckBox name="locuinte-necesitate">de necesitate</CheckBox>
+            <CheckBox name="locuinte-interventie">de intervenţie</CheckBox>
+            <CheckBox name="locuinte-protocol">de protocol</CheckBox>
           </Grid>
           <List.BlankItem>
           Număr de aprtamente propuse

@@ -39,7 +39,9 @@ export default class Section extends React.Component {
         id={card.id} 
         content={card.desc} 
         borderColor={ROADMAP_COLORS.sections[this.props.title]}
-        labels={card.labels}/>
+        labels={card.labels}
+        date={card.dateLastActivity}
+        />
         );
     });
     return list;

@@ -4,7 +4,7 @@ import Typography from "../typography/typography.component";
 import COLOR from "../../../../theme/colors";
 
 function calcLuminance(rgb) {
-    if (typeof rgb === "string") {
+  if (typeof rgb === "string") {
     const r = (parseInt("0x" + rgb.replace("#", "")) & 0xff0000) >> 16;
     const g = (parseInt("0x" + rgb.replace("#", "")) & 0xff00) >> 8;
     const b = parseInt("0x" + rgb.replace("#", "")) & 0xff;
@@ -19,14 +19,16 @@ export default function Label(props) {
       className={classes.label}
       style={{
         backgroundColor: `${props.bgcolor}`,
-        color: `${
+      }}
+    >
+      <Typography.P2
+        text={props.text}
+        color={
           calcLuminance(props.bgcolor) > 0.4
             ? COLOR.arhitexturaDark
             : COLOR.arhitexturaLight
-        }`,
-      }}
-    >
-      <Typography.P2 text={props.text} />
+        }
+      />
     </div>
   );
 }

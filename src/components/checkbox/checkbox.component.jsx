@@ -42,7 +42,7 @@ export default class Checkbox extends Component {
             <label style={{textAlign:"justify",...this.props.style}}>
                 <input 
                 type="checkbox" 
-                name={ this.props.name } 
+                name = { this.props.name } 
                 id = { this.props.name }
                 ref = { this.inputRef }
                 onFocus = { this.handleFocus }

@@ -21,6 +21,7 @@ const CategorieConstructii = (props) => {
               className="cb-inputs"
               key={obj["id"]}
               name={obj["id"]}
+              id={obj["id"]}
               style={{
                 marginLeft: `${(depth / 2) * (props.indentSubCat || 20)}px`,
               }}
