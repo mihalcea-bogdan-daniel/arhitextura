@@ -1,0 +1,11 @@
+
+.contents{
+    min-height: 0px;
+    transition: all 0.5s ease-in;
+    &.on{
+        min-height: 200px;
+    }
+}
+
+
+

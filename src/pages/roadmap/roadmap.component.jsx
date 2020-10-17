@@ -38,6 +38,7 @@ export default class Roadmap extends Component {
   render() {
     // console.log(this.sectionComponentList());
     const sections = this.sectionComponentList();
+    if(this.state.isLoading) return <div>Se incarcă ...</div>
     return (
       <div className={classes.roadmap_component}>
         {sections}

@@ -1,0 +1,18 @@
+.button_icon{
+    display: block;
+    margin: 0 auto;
+    fill: #a9a9a9;
+    cursor: pointer;
+    
+}
+
+.contents{
+    min-height: 0px;
+    transition: height 1s ease-in;
+    &.on{
+        min-height: 200px;
+    }
+}
+
+
+

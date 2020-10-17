@@ -5,7 +5,7 @@ import {TRELLO_COLORS, TRELLO_CONSTANTS} from '../../constants'
 import COLORS from '../../../../theme/colors'
 import Typography from "../typography/typography.component";
 import Label from "../label/label.component";
-
+import ToggleContainer from '../toggle-container/toggle-container.component'
 /**
  * @param {String} props.title - The title of the card
  * @param {String} props.content - The content of the card
@@ -16,7 +16,9 @@ class Card extends Component {
     title:"A big title here",
     content: "Lorem ipsum dolor sit unem feratos lundera maximus",
     date: new Date(Date.now()),
-    checklists: ["Checklist 1", "Checklist 2"]
+    checklists: ["Checklist 1", "Checklist 2"],
+    bgColor: COLORS.arhitexturaAltMedium,
+    borderColor: COLORS.arhitexturaAccent
   };
 
   labelList() {
@@ -25,7 +27,7 @@ class Card extends Component {
       labelList.push(
         <Label 
         key={`${label.name}-${i}`}
-        bgcolor={TRELLO_COLORS.labels[label.color]}
+        bgcolor={TRELLO_COLORS.labels[label.color] || this.defaultProps.bgColor}
         text = {label.name}
         />
       )
@@ -41,7 +43,7 @@ class Card extends Component {
       <div className={classes.card}>
         <div
           className={classes.border}
-          style={{ backgroundColor: this.props.borderColor }}
+          style={{ backgroundColor: this.props.borderColor || this.defaultProps.borderColor}}
         ></div>
         <div className={classes.card_content}>
           <div className={classes.label_container}>
@@ -50,7 +52,8 @@ class Card extends Component {
           </div>
           <Typography.H2 text={this.props.title} />
           <Typography.P text={this.props.content}></Typography.P>
-          <Typography.P2 text={this.parseDate()} color={"#AAAAAA"} paddingTop={10}></Typography.P2>
+          {this.props.checklists.length ? <ToggleContainer content={this.props.checklists}/> : null }
+          <Typography.P2 text={this.parseDate()} color={"#a9a9a9"} paddingTop={10}></Typography.P2>
           
         </div>
       </div>

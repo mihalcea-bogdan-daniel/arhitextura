@@ -24,6 +24,7 @@ export default class Section extends React.Component {
         .catch((err) => {
           this.setState({ errorState: true });
           console.log(err);
+          return <div>Something is wrong ...</div>
         });
     }
   }
@@ -41,12 +42,14 @@ export default class Section extends React.Component {
         borderColor={ROADMAP_COLORS.sections[this.props.title]}
         labels={card.labels}
         date={card.dateLastActivity}
+        checklists = {card.idChecklists}
         />
         );
     });
     return list;
   }
   render() {
+    if(this.state.isLoading) return <div>Se încarcă ...</div>
     return (
       <div className={classes.section}>
         <Typography.H1 text={this.props.title} />

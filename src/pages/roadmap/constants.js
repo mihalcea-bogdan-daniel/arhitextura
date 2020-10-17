@@ -6,14 +6,26 @@
  */
 
 export class TRELLO_CONSTANTS {
+  /**
+   * @abstract TRELLO = "https://api.arhitextura.ro/";
+   */
   static TRELLO = "https://api.arhitextura.ro/";
 //   static TRELLO = "http://localhost:8443/";
+
+  /** 
+   * @abstract new URL("/trello/lists", this.TRELLO)
+  */
   static GET_LISTS_URL = new URL("/trello/lists", this.TRELLO).href;
+
+  /**
+   * @abstract new URL("/trello/cards", this.TRELLO)
+   */
   static GET_ALL_CARDS_URL = new URL("/trello/cards", this.TRELLO).href;
 
   /**
    *
    * @param {String} _id - Id of the list from which to return cards
+   * @abstract new URL(`/trello/list/${_id}/cards`) 
    * @returns {URL}
    */
   static GET_CARDS_ON_LIST = (_id) => {
