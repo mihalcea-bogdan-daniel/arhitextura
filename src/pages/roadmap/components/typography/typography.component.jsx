@@ -2,25 +2,19 @@ import React, { Component } from "react";
 import classes from "./typography.module.scss";
 import COLORS from "../../../../theme/colors.js";
 
+import parse from './utils.js'
 export default class Typography extends Component {
   static defaultProps = {
     textColor: COLORS.arhitexturaDark,
   };
 //TODO
-  static parseText(_text){
-      
-      const squareBracketsRegEx = /\[(.*?)\]/
-      const paranthesisRegEx = /\((.*?)\(/
-      const textArray = _text.split(squareBracketsRegEx)
-      textArray.shift()
-      return <span>{_text}</span>
-  }
+
   static H1 = (props) => {
     return (
       <div className={`${classes.heading1} ${classes.global}`}
       style={{ color: props.color || this.defaultProps.textColor}}
       >
-        {this.parseText(props.text)}
+        {parse(props.text)}
       </div>
     );
   };
@@ -29,7 +23,7 @@ export default class Typography extends Component {
       <div className={`${classes.heading2} ${classes.global}`}
       style={{ color: props.color || this.defaultProps.textColor}}
       >
-        {props.text}
+        {parse(props.text)}
       </div>
     );
   };
@@ -39,7 +33,7 @@ export default class Typography extends Component {
       className={`${classes.paragraph} ${classes.global}`}
       style={{ color: props.color || this.defaultProps.textColor}}
       >
-        {props.text}
+        {parse(props.text)}
       </div>
     );
   };
@@ -55,7 +49,7 @@ export default class Typography extends Component {
              paddingRight: props.paddingRight || 0,
             }}
       >
-        {props.text}
+        {parse(props.text)}
       </div>
     );
   };

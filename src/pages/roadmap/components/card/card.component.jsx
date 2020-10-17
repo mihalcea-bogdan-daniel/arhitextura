@@ -12,6 +12,13 @@ import Label from "../label/label.component";
  * @param {Date} props.date - The date last modified
  */
 class Card extends Component {
+  static defaultProps = {
+    title:"A big title here",
+    content: "Lorem ipsum dolor sit unem feratos lundera maximus",
+    date: new Date(Date.now()),
+    checklists: ["Checklist 1", "Checklist 2"]
+  };
+
   labelList() {
     const labelList = [];
     this.props.labels.forEach((label,i) => {
@@ -44,6 +51,7 @@ class Card extends Component {
           <Typography.H2 text={this.props.title} />
           <Typography.P text={this.props.content}></Typography.P>
           <Typography.P2 text={this.parseDate()} color={"#AAAAAA"} paddingTop={10}></Typography.P2>
+          
         </div>
       </div>
     );
