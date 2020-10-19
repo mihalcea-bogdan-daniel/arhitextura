@@ -31,6 +31,17 @@ export class TRELLO_CONSTANTS {
   static GET_CARDS_ON_LIST = (_id) => {
     return new URL(`/trello/list/${_id}/cards`, this.TRELLO).href;
   };
+
+  
+  /**
+   *Get the checklist data by ID
+   * @param {String} _id - Id of the list from which to return cards
+   * @abstract new URL(`/trello/checklist/${_id}/`) 
+   * @returns {URL}
+   */
+  static GET_CHECKLISTS_BY_ID = (_id) => {
+    return new URL(`/trello/checklist/${_id}`, this.TRELLO).href;
+  };
 }
 
 export const ROADMAP_COLORS = {

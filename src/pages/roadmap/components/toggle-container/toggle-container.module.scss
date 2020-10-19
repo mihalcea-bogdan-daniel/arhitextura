@@ -6,13 +6,4 @@
     
 }
 
-.contents{
-    min-height: 0px;
-    transition: height 1s ease-in;
-    &.on{
-        min-height: 200px;
-    }
-}
-
-
 

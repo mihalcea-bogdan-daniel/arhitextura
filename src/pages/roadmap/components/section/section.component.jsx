@@ -33,6 +33,7 @@ export default class Section extends React.Component {
     const list = [];
     
     this.state.cards.forEach((card) => {
+      
       list.push(
       <Card 
         title={card.name} 
