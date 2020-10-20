@@ -24,11 +24,8 @@ const ToggleContainer = (props) => {
   const [isErrorState, setErrorState] = useState("");
   useEffect(() => {
     fetchChecklistsData();
-    
-
   }, []);
 
-  //TODO Some evry strange thing is happening here ... needs fix
   const fetchChecklistsData = async () => {
     if (props.checklists.length) {
       props.checklists.forEach((checkList) => {

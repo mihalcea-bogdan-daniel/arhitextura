@@ -1,26 +1,29 @@
 @import '../../../../theme/color-table.scss';
 
 .section {
-    transition: all 0.95s ease-in;
+  transition: all 0.95s ease-in;
 }
 
 .card_container {
-    max-height: 400px;
-    
-    transition: all 0.25s ease-in;
-    scrollbar-width: none;
-    overflow-y: auto;
+  max-height: 400px;
 
-    
-    &::-webkit-scrollbar {
-        width: 5px;
-        background: $arhitextura-light;
-        border-radius: 20px;
+  transition: all 0.25s ease-in;
+  scrollbar-width: none;
+  overflow-y: auto;
 
-      }
-      &::-webkit-scrollbar-thumb {
-        width: 5px;
-        background: #CCC;
-        border-radius: 20px;
-      }
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: $arhitextura-light;
+    border-radius: 20px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: #CCC;
+    border-radius: 20px;
+    &:hover{
+      background-color: $arhitextura-medium;
+    }
+  }
 }
