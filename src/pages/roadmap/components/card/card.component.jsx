@@ -39,6 +39,7 @@ class Card extends Component {
     const rawDate = new Date(this.props.date);
     return `${rawDate.getDate()} ${rawDate.getMonth()+1} ${rawDate.getFullYear()}`
   }
+
   render() {
     this.props.checklists.filter( checklistItem => typeof checklistItem === "object")
     return (

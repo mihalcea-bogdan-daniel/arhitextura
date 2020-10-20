@@ -1,19 +1,32 @@
+@import "../../../../theme/color-table.scss";
+.contents {
+  max-height: 0px;
+  display: flex;
+  opacity: 0.01;
+  visibility: hidden;
+  transition: max-height, 0.5s ease-in 0.1s, opacity 0.5s ease-out 0.45s;
+  flex-direction: column;
+  overflow-y: auto;
 
-.contents{
-    max-height: 0px;
+  &.on {
     display: flex;
-    opacity: 0.01;
-    visibility: hidden;
-    transition: max-height, 0.5s ease-in 0.1s, opacity 0.5s ease-out ;
-    
-    
-    &.on{
-        display: flex;
-        max-height: 200px;
-        opacity: 1;
-        visibility: visible;
-    }
+    max-height: 200px;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: column;
+    overflow-y: auto;
+  }
 }
 
-
-
+.contents {
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: $arhitextura-light;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: #CCC;
+    border-radius: 20px;
+  }
+}

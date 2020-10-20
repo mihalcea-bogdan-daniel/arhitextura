@@ -1,0 +1,17 @@
+@import '../../../../theme/color-table.scss';
+
+.container{
+    display: block;
+    margin-top: 10px;
+}
+.title{
+    display: block;
+}
+.check_list_item{
+    display: flex;
+    
+    svg{
+        fill: $arhitextura-dark;
+        max-height: 16px;
+    }
+}

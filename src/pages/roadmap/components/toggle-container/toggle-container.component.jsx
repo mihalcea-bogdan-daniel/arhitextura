@@ -4,6 +4,7 @@ import "./container.styles.scss";
 import { ReactComponent as ToggleMore } from "../../../../icons/expand_more-24px.svg";
 import { ReactComponent as ToggleLess } from "../../../../icons/expand_less-24px.svg";
 import Binary from "../binary-component/binary.component";
+import Checklist from '../checklist/checklist.component';
 import { TRELLO_CONSTANTS } from "../../constants";
 const ToggleButton = (props) => {
   return (
@@ -19,50 +20,52 @@ const ToggleButton = (props) => {
 
 const ToggleContainer = (props) => {
   const [toggle, setToggle] = useState(false);
-  const [checkListItems, setCheckListItems] = useState(props.checklists || []);
+  const [checkListItems, setCheckListItems] = useState([]);
   const [isErrorState, setErrorState] = useState("");
   useEffect(() => {
     fetchChecklistsData();
-    console.log("CHECKLIST PROPS",props.checklists)
-    console.log("CHECKLISTITEM IN STATE:",checkListItems)
     
+
   }, []);
 
   //TODO Some evry strange thing is happening here ... needs fix
   const fetchChecklistsData = async () => {
     if (props.checklists.length) {
       props.checklists.forEach((checkList) => {
-        fetch(TRELLO_CONSTANTS.GET_CHECKLISTS_BY_ID(checkList))
-          .then((res) => {
-            return res.json();
-          })
-          .then((data) => {
-            console.log("DATA:", data.checkItems)
-            const checkItems = data.checkItems;
-            checkItems.forEach((checkItem)=>{
-              if(typeof checkItem === "object"){
-              setCheckListItems(
-                checkListItems.push(checkItem)
-                );
+        if (typeof checkList === "string") {
+          fetch(TRELLO_CONSTANTS.GET_CHECKLISTS_BY_ID(checkList))
+            .then((res) => {
+              return res.json();
+            })
+            .then((data) => {
+              const checkObject = {
+                title:data.name, 
+                listOfItems:[... data.checkItems]
               }
-              })
+              setCheckListItems(checkListItems=>[...checkListItems, checkObject]);
+              
             })
             .catch((err) => {
               setErrorState(new Error(err));
               console.log(err);
-          });
-      });
-    }
+            });
+          }
+        });
+
+      }
   };
   const handleClick = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
 
   return (
     <div>
       <div className={`contents ${toggle ? "on" : ""}`}>
-        {checkListItems}
+          {checkListItems.map((elem)=>{
+            return(
+              <Checklist title={elem.title} items = {elem.listOfItems}/>
+            )
+          })}
         </div>
       <ToggleButton toggle={toggle && true} onClick={handleClick} />
     </div>

@@ -50,9 +50,11 @@ export default function parseString(textString) {
   }
 
   function recursiveParse(text) {
+    if(!text) return
     const fullRegex = /\[(.*?)\]\((.*?)\)/g;
     const matchList = [...text.matchAll(fullRegex)]
     const currentMatch = matchList.shift()
+    
     if (currentMatch) {
       if (currentMatch.index > 0) {
         childArray.push(<SpanElement key = {_keyAdder()} text={text.slice(0, currentMatch.index)} />)

@@ -1,15 +1,26 @@
 @import '../../../../theme/color-table.scss';
 
-.section {}
+.section {
+    transition: all 0.95s ease-in;
+}
 
 .card_container {
     max-height: 400px;
-    -ms-overflow-style: none;
-
+    
+    transition: all 0.25s ease-in;
     scrollbar-width: none;
-    overflow-y: scroll;
+    overflow-y: auto;
 
-    &.card_container::-webkit-scrollbar {
-        display: none;
-    }
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+        background: $arhitextura-light;
+        border-radius: 20px;
+
+      }
+      &::-webkit-scrollbar-thumb {
+        width: 5px;
+        background: #CCC;
+        border-radius: 20px;
+      }
 }
