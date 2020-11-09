@@ -3,7 +3,7 @@ import classes from "./toggle-container.module.scss";
 import "./container.styles.scss";
 import { ReactComponent as ToggleMore } from "../../../../icons/expand_more-24px.svg";
 import { ReactComponent as ToggleLess } from "../../../../icons/expand_less-24px.svg";
-import Binary from "../binary-component/binary.component";
+// import Binary from "../binary-component/binary.component";
 import Checklist from '../checklist/checklist.component';
 import { TRELLO_CONSTANTS } from "../../constants";
 const ToggleButton = (props) => {

@@ -14,7 +14,7 @@ export function CheckItem(props) {
         falseComponent={<UncheckedIcon />}
         toggle={props.toggle}
       />
-      <Typography.P2 text={props.text} />
+      <Typography.P2 text={props.text} color={"#111111"}/>
     </div>
   );
 }
