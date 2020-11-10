@@ -29,9 +29,10 @@ export default function Checklist(props) {
       <div className={classes.title}>
         <Typography.H2 text={props.title || defaultProps.title} />
       </div>
-        {props.items.map((elem) => {
+        {props.items.map((elem, i) => {
           return (
             <CheckItem
+              key = {`checkItem-${i}`}
               text={elem.name}
               toggle={elem.state === "complete" ? true : false}
             />

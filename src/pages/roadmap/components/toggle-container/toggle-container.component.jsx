@@ -58,9 +58,9 @@ const ToggleContainer = (props) => {
   return (
     <div>
       <div className={`contents ${toggle ? "on" : ""}`}>
-          {checkListItems.map((elem)=>{
+          {checkListItems.map((elem, i)=>{
             return(
-              <Checklist title={elem.title} items = {elem.listOfItems}/>
+              <Checklist key={`checkList-${i}`} title={elem.title} items = {elem.listOfItems}/>
             )
           })}
         </div>
