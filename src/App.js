@@ -11,30 +11,49 @@ import FormularF8 from "./formulare/f8-cerere-aut-constr/f8-cerere-autorizatie.f
 
 const ComponentWithPanels = (props) => {
   return (
-    <div className="main-container">
+    <>
       <Panel side="left"></Panel>
       <FormPage formular={props.component} />
       <Panel side="right">
         <Roadmap />
       </Panel>
-    </div>
+    </>
   );
 };
-
+const Test = () => {
+  return <div>Why not working?????????????</div>;
+};
 const App = () => {
   return (
     <Router>
-      <div>
-        <Header>
-          <Link to="/" exact>Home</Link>
-          <Link to="/formular-f8" exact>Formulare</Link>
-          <Link to="/teste" exact>Teste</Link>
-        </Header>
-
+      <Header>
+        <Link to="/" exact>
+          Home
+        </Link>
+        <Link to="/formular-f8" exact>
+          Formulare
+        </Link>
+        <Link to="/teste" exact>
+          Teste
+        </Link>
+      </Header>
+      <div className="main-container">
         <Switch>
-          <Route path="/formular-f8" component={ComponentWithPanels} />
-          <Route path="/" render={(props)=>(<ComponentWithPanels {...props} component={<FormularF8/>}/>)} />
-          <Route path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<Login/>}/>)} />
+          
+          <Route exact
+            path="/"
+            render={(props) => (
+              <ComponentWithPanels {...props} component={<FormularF8 />} />
+            )}
+          />
+          <Route exact
+            path="/formular-f8"
+            render={(props) => (
+              <ComponentWithPanels {...props} component={<FormularF8 />} />
+            )}
+          />
+          <Route exact path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<Login/>}/>)} />
+          
         </Switch>
       </div>
     </Router>
