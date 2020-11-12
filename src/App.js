@@ -6,6 +6,7 @@ import FormPage from "./components/form-page/formpage.component";
 
 import Roadmap from "./pages/roadmap/roadmap.component";
 import Login from "./pages/login-out/login.page";
+import SignUp from "./pages/login-out/signup.page";
 import Header from "./components/header/header.component";
 import FormularF8 from "./formulare/f8-cerere-aut-constr/f8-cerere-autorizatie.formular";
 
@@ -52,7 +53,7 @@ const App = () => {
               <ComponentWithPanels {...props} component={<FormularF8 />} />
             )}
           />
-          <Route exact path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<Login/>}/>)} />
+          <Route exact path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<SignUp/>}/>)} />
           
         </Switch>
       </div>

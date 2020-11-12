@@ -4,7 +4,19 @@ import Typography from "../../pages/roadmap/components/typography/typography.com
 export function TextField(props) {
   const inputRef = React.useRef();
   const [focused, setFocused] = React.useState(false);
+  const [status, setStatus] = React.useState("");
 
+  function statusClassName(){
+    switch (props.status) {
+      case "error":
+        return styles.error
+      case "disabled":
+        return "disabled"
+      default:
+        break;
+    }
+  }
+  
   const handleChange = (e) => {
     if (e.target.value == "") {
       setFocused(false);
@@ -16,7 +28,7 @@ export function TextField(props) {
   return (
     <div>
       <input
-        className={styles.input}
+        className={`${styles.input}`}
         type={props.type || "text"}
         id={props.id}
         ref={inputRef}
@@ -32,7 +44,7 @@ export function TextField(props) {
         {...props}
       ></input>
       <label
-        className={`${styles.inputTextLabel} ${focused ? styles.focused : ""}`}
+        className={`${styles.inputTextLabel} ${focused ? styles.focused : ""} ${statusClassName()}`}
         htmlFor={props.id}
       >
         {props.helpertext || props.type}
@@ -41,13 +53,14 @@ export function TextField(props) {
   );
 }
 function Submit(props) {
-  return <input type="submit" value={props.value} />;
+  return <input className = {styles.input} type="submit" value={props.value} />;
 }
 
 function Form(props) {
   const { children } = props;
   return (
     <form className={styles.form} {...props}>
+          <Typography.H1 text={props.title}/>
       {children}
     </form>
   );
