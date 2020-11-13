@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./signup.module.scss";
 
 import Form from "../../components/text-input/inputs.component";
-import Typography from '../../pages/roadmap/components/typography/typography.component'
 export default function SignUp() {
   const [state, setState] = React.useState({});
   const handleChange = (e) => {

@@ -4,7 +4,6 @@ import Typography from "../../pages/roadmap/components/typography/typography.com
 export function TextField(props) {
   const inputRef = React.useRef();
   const [focused, setFocused] = React.useState(false);
-  const [status, setStatus] = React.useState("");
 
   function statusClassName(){
     switch (props.status) {
@@ -18,7 +17,7 @@ export function TextField(props) {
   }
   
   const handleChange = (e) => {
-    if (e.target.value == "") {
+    if (e.target.value === "") {
       setFocused(false);
     } else {
       setFocused(true);
@@ -55,6 +54,9 @@ export function TextField(props) {
 function Submit(props) {
   return <input className = {styles.input} type="submit" value={props.value} />;
 }
+function Button(props) {
+  return <input className = {styles.input} type="button" value={props.value} />;
+}
 
 function Form(props) {
   const { children } = props;
@@ -68,5 +70,6 @@ function Form(props) {
 
 Form.TextField = TextField;
 Form.Submit = Submit;
+Form.Button = Button;
 
 export default Form;

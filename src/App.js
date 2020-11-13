@@ -53,7 +53,8 @@ const App = () => {
               <ComponentWithPanels {...props} component={<FormularF8 />} />
             )}
           />
-          <Route exact path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<SignUp/>}/>)} />
+          <Route exact path="/login" render={(props)=>(<ComponentWithPanels {...props} component={<Login/>}/>)} />
+          <Route exact path="/signup" render={(props)=>(<ComponentWithPanels {...props} component={<SignUp/>}/>)} />
           
         </Switch>
       </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classes from "./card.module.scss";
 //Constants
-import {TRELLO_COLORS, TRELLO_CONSTANTS} from '../../constants'
+import {TRELLO_COLORS} from '../../constants'
 import COLORS from '../../../../theme/colors'
 import Typography from "../typography/typography.component";
 import Label from "../label/label.component";

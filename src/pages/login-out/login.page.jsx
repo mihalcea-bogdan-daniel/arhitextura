@@ -1,13 +1,34 @@
 import React from "react";
 import classes from "./login.module.scss";
-
+import { Link } from "react-router-dom";
 import Form from "../../components/text-input/inputs.component";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "./userSlice";
+
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import firebaseConfig from "../../app/firebase_config";
+firebase.initializeApp(firebaseConfig);
 
 export default function Login() {
   const [state, setState] = React.useState({});
-  const handleChange = (e) => {
-    // console.log(e.target.id);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
 
+  const handleLogin = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(state.email, state.password)
+      .then((res) => {
+        dispatch(setUser(res.user.displayName));
+        console.log(res);
+      })
+      .catch((error) => {
+        setState({ ...state, message: error.message });
+      });
+  };
+  const handleChange = (e) => {
     setState({ ...state, [e.target.id]: e.target.value });
   };
   return (
@@ -15,7 +36,7 @@ export default function Login() {
       <Form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(state);
+          handleLogin();
         }}
       >
         <Form.TextField
@@ -34,7 +55,13 @@ export default function Login() {
             handleChange(e);
           }}
         />
-        <Form.Submit value={"LOG IN"} />
+        <div>{user.uid}</div>
+        {state.message && <div>Invalid credentials, please try again</div>}
+
+        <Form.Submit value={"CONECTARE"} />
+        <Link to="/signup">
+          <Form.Button value={"ÎNREGISTRARE"} />
+        </Link>
       </Form>
     </div>
   );

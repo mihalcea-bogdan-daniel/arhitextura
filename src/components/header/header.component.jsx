@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './header.module.scss';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {ReactComponent as ArhiLogo} from '../../images/logo/Web_logo_Logo_patrat_negru.svg'
 
