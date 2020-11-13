@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./login.module.scss";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Form from "../../components/text-input/inputs.component";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "./userSlice";
