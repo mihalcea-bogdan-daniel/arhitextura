@@ -1,13 +1,30 @@
 import React from "react";
 import classes from "./signup.module.scss";
-
 import Form from "../../components/text-input/inputs.component";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "./userSlice";
+import firebase from "./firebase_functions";
+
 export default function SignUp() {
   const [state, setState] = React.useState({});
+  const dispatch = useDispatch();
   const handleChange = (e) => {
-    // console.log(e.target.id);
-
     setState({ ...state, [e.target.id]: e.target.value });
+  };
+  const handleSubmit = () => {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(state.email, state.password)
+      .then((res) => {
+        const userPayload = { email: res.user.email, uid:res.user.uid, displayName:res.user.displayName };
+        dispatch(setUser(userPayload));
+        console.log(res.user);
+      })
+      .catch((e) => {
+        const errorCode = e.code;
+        const errorMessage = e.message;
+        console.log(errorCode, errorMessage);
+      });
   };
   return (
     <div className={classes.signup}>
@@ -15,6 +32,7 @@ export default function SignUp() {
         title={"Înregistrare"}
         onSubmit={(e) => {
           e.preventDefault();
+          handleSubmit();
           console.log(state);
         }}
       >
@@ -35,7 +53,7 @@ export default function SignUp() {
           }}
         />
         <Form.TextField
-          id="e-mail"
+          id="email"
           helpertext={"e-mail"}
           type={"email"}
           onChange={(e) => {

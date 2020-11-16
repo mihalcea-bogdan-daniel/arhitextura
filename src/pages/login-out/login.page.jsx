@@ -4,12 +4,9 @@ import { Link, Redirect } from "react-router-dom";
 import Form from "../../components/text-input/inputs.component";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "./userSlice";
+import firebase from './firebase_functions'
 
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
-import firebaseConfig from "../../app/firebase_config";
-firebase.initializeApp(firebaseConfig);
+
 
 export default function Login() {
   const [state, setState] = React.useState({});
