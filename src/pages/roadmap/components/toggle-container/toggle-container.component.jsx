@@ -21,9 +21,12 @@ const ToggleButton = (props) => {
 const ToggleContainer = (props) => {
   const [toggle, setToggle] = useState(false);
   const [checkListItems, setCheckListItems] = useState([]);
+  // eslint-disable-next-line
   const [isErrorState, setErrorState] = useState("");
   useEffect(() => {
+  // eslint-disable-next-line
     fetchChecklistsData();
+  // eslint-disable-next-line
   }, []);
 
   const fetchChecklistsData = async () => {
@@ -37,7 +40,7 @@ const ToggleContainer = (props) => {
             .then((data) => {
               const checkObject = {
                 title:data.name, 
-                listOfItems:[... data.checkItems]
+                listOfItems:[...data.checkItems]
               }
               setCheckListItems(checkListItems=>[...checkListItems, checkObject]);
               
@@ -64,7 +67,7 @@ const ToggleContainer = (props) => {
             )
           })}
         </div>
-      <ToggleButton toggle={toggle && true} onClick={handleClick} />
+      <ToggleButton toggle={toggle ? 1: 0} onClick={handleClick} />
     </div>
   );
 };

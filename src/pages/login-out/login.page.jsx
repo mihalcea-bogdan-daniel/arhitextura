@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./login.module.scss";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Form from "../../components/text-input/inputs.component";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "./userSlice";
-import firebase from './firebase_functions'
+import firebase from '../../app/firebase_functions'
 
 
 
@@ -18,7 +18,7 @@ export default function Login() {
       .auth()
       .signInWithEmailAndPassword(state.email, state.password)
       .then((res) => {
-        dispatch(setUser(res.user.displayName));
+        dispatch(setUser(res.user));
         console.log(res);
       })
       .catch((error) => {

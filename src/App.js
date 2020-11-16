@@ -21,9 +21,6 @@ const ComponentWithPanels = (props) => {
     </>
   );
 };
-const Test = () => {
-  return <div>Why not working?????????????</div>;
-};
 const App = () => {
   return (
     <Router>
