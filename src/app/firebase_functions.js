@@ -1,4 +1,4 @@
-import { setUser } from "../pages/login-out/userSlice";
+import { setUser, logOut } from "../pages/login-out/userSlice";
 import store from './store'
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -14,8 +14,3 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(setUser(user));
   }
 });
-
-const unsubscribe = store.subscribe(
-  (s) => {console.log("adsad");}
-)
-unsubscribe()

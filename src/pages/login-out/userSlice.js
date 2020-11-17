@@ -8,6 +8,9 @@ export const userSlice = createSlice({
     setUser:(state, action) => {
       const {uid, displayName, email} = action.payload
       state.currentUser = {displayName: displayName, uid:uid, email:email}
+    }, 
+    logOut:(state)=>{
+      state.currentUser = null
     }
   },
 });
@@ -17,5 +20,5 @@ export const userSlice = createSlice({
 //The errorr messages will be handles in the internal state of
 // the login and sign out component
 
-export const { userLogin, setDisplayName, setUser } = userSlice.actions;
+export const { setUser, logOut } = userSlice.actions;
 export default userSlice.reducer;

@@ -10,6 +10,7 @@ export function TextField(props) {
       case "error":
         return styles.error
       case "disabled":
+        //Styles. disabled styling ...
         return "disabled"
       default:
         break;
@@ -55,7 +56,7 @@ function Submit(props) {
   return <input className = {styles.input} type="submit" value={props.value} />;
 }
 function Button(props) {
-  return <input className = {styles.input} type="button" value={props.value} />;
+  return <input className = {styles.input} type="button" value={props.value} {...props} />;
 }
 
 function Form(props) {
