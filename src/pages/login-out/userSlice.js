@@ -7,7 +7,7 @@ export const userSlice = createSlice({
   reducers: {
     setUser:(state, action) => {
       const {uid, displayName, email} = action.payload
-      state.currentUser = {...state, displayName: displayName, uid:uid, email:email}
+      state.currentUser = {displayName: displayName, uid:uid, email:email}
     }
   },
 });

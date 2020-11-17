@@ -4,6 +4,11 @@
     padding-top: 16px;
     // background-color: azure;
     font-family: 'Montserrat', sans-serif;
-    
-    
+}
+
+@media screen and (max-width:480px){
+    .left{
+        //TO-DO: at least for now is not displayed
+        display: none;
+    }
 }

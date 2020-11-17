@@ -10,8 +10,8 @@ export default firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     console.warn(user, " has signed in");
-    const userPayload = { email: user.email, uid: user.uid, displayName: user.displayName };
-    store.dispatch(setUser(userPayload));
+    // const userPayload = { email: user.email, uid: user.uid, displayName: user.displayName };
+    store.dispatch(setUser(user));
   }
 });
 
