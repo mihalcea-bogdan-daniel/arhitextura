@@ -1,0 +1,30 @@
+@import "../../../../theme/color-table.scss";
+.avatar {
+  display: flex;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 100px;
+  background-color: skyblue;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  div {
+    color: $arhitextura-light;
+
+    &:hover {
+      color: $arhitextura-medium;
+    }
+  }
+}
+
+.dropdown {
+  color: red;
+  display: flex;
+  flex-flow: column;
+}
+.on {
+  color: blue;
+
+}

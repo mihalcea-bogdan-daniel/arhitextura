@@ -23,3 +23,7 @@
     background-color: $arhitextura-dark;
   }
 }
+.container{
+  display: flex;
+  flex-flow: row-reverse;
+}

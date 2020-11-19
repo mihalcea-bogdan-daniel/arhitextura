@@ -1,5 +1,6 @@
 import React from "react";
 import Forms from "../text-input/inputs.component";
+import Avatar from './components/avatar/avatar.component'
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -39,9 +40,10 @@ export default function LogInOut() {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {user ? (
-        <Forms.Button value="DECONECTARE" onClick={handleLogout} />
+        // <Forms.Button value="DECONECTARE" onClick={handleLogout} />
+        <Avatar/>
       ) : (
         <Link to="/login">
           <Forms.Button value="CONECTARE" />
